@@ -328,19 +328,6 @@ nav {
 .service {
     position: relative;
 
-    .bg-shadow {
-		position: absolute;
-		top: 0%;
-        left: 0%;
-		width: 75em;
-		height: 90em;
-		border-radius: 70% 30% 61% 39% / 46% 67% 33% 54%;
-		background-color: $gray;
-		opacity: 0.15;
-		filter: blur(2px);
-		animation: heder-img-bg 8s linear infinite;
-		z-index: -20;
-	}
 
 	.service-content {
 		display: flex;
@@ -358,9 +345,13 @@ nav {
 
 			.service-text-area {
 				margin: 3em 0;
-				width: 50em;
+				padding: 0em 2.8em;
+				width: 100%;
 				height: 20em;
 
+				p{
+					// font-size: 1.8rem;
+				}
 				h2 {
 					color: $main-color;
 				}
@@ -368,7 +359,7 @@ nav {
 
 			.service-box {
 				margin: 3em 0;
-				width: 50em;
+				width: 90%;
 				min-height: 35em;
 				border-radius: 0.3em;
 				overflow: hidden;
@@ -383,7 +374,6 @@ nav {
 					width: 100%;
 					height: 30em;
 					border-radius: 0.3em;
-					background-color: rgba(0, 255, 0, 0.166);
 
 					&__one {
 						background-image: url(../img/muzyka.jpg);
@@ -487,7 +477,7 @@ nav {
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
-			height: 30em;
+			height: 100%;
 
 			.special-img-box {
 				width: 47%;
@@ -535,20 +525,6 @@ nav {
 
 .accordeon {
     position: relative;
-
-    .bg-shadow{
-        position: absolute;
-		top: -10%;
-        right: -10%;
-		width: 55em;
-		height: 80em;
-		border-radius: 70% 30% 61% 39% / 46% 67% 33% 54%;
-		background-color: $gray;
-		opacity: 0.1;
-		filter: blur(2px);
-		animation: heder-img-bg 3s linear infinite;
-		z-index: -20;
-    }
 
 	.accordeon-content {
 		display: flex;
@@ -801,7 +777,34 @@ nav {
 
 
 
+.test{
+    position: relative;
+    width: 100%;
+    height: 80em;
+    background-image: url(../img/lion.jpg);
+    background-size: cover;
+    z-index: 1;
 
+    h3{
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 45%;
+        left: 50%;
+        font-size: 19em;
+        width: 100%;
+        text-align: center;
+        color: $pure;
+        z-index: -2;
+    }
+
+    .test-up{
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/lioncięte.png);
+        background-size: cover;
+        z-index: 10;
+    }
+}
 
 
 
@@ -869,6 +872,39 @@ nav {
 			}
 		}
 	}
+	.service {	
+		.service-content {
+	
+			.service-column {
+	
+				.service-text-area {
+
+					p{
+						font-size: 1.8rem;
+					}
+					
+				}
+			}
+		}
+	}
+	.special {
+		.special-content {
+			.special-text {
+				h2 {
+				}
+				p {
+					font-size: 1.8rem;
+				}	
+			}
+		}
+	}
+	.plus{
+		padding: 3em 0 0 5em;
+		h3{
+			font-size: 4em;
+		}
+	}
+	
 }
 @media (max-width: 900px) {
 	nav {
@@ -980,6 +1016,140 @@ nav {
 			}
 		}
 	}
+	.service {
+		.service-content {
+			flex-direction: column;
+			.service-column {
+				flex-direction: column;
+				width: 100%;
+	
+			}
+		}
+	}
+	.special{ 
+		.special-content {
+			.special-text {
+			}
+	
+			.special-img {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 100%;
+				height: 100%;
+	
+				.special-img-box {
+					margin: 1em 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.accordeon {
+		position: relative;
+	
+		.accordeon-content {
+			display: flex;
+			flex-direction: column;
+	
+			.accordeon-elements {
+				width: 100%;
+	
+				.accordeon-box {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin-bottom: 2em;
+					padding: 1em;
+					width: 100%;
+					min-height: 8em;
+					border-radius: 0.3em;
+	
+					.box-title {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						cursor: pointer;
+	
+						i {
+							font-size: 2.5em;
+							transition: all 0.3s;
+							color: $main-color;
+						}
+						h3 {
+							color: $main-color;
+						}
+	
+						&:hover i {
+							transform: rotate(90deg);
+						}
+					}
+					.box-text {
+						padding-top: 2em;
+						height: 0em;
+						overflow: hidden;
+						transition: all 0.3s;
+					}
+				}
+			}
+			.accordeon-text {
+				padding: 0.1em 2em 1em 0.9em;
+				width: 100%;
+				height: 100%;
+
+			}
+		}
+	}
+	.contact {
+		.contact-content {
+			flex-direction: column;
+			width: 100%;
+			// background-color: lime;
+	
+			.contact-img {
+				padding: 1em 0 0 2em;
+				height: 35em;
+				width: 90%;
+	
+			}
+			.contact-form {
+				margin-top: 5em;
+				height: 50em;
+				padding: 0 5em;
+				width: 100%;
+
+			}
+		}
+	}
+	.plus{
+		padding: 5em 0;
+		text-align: center;
+		width: 100%;
+		h3{
+			font-size: 3.5em;
+		}
+	}
+	.footer{
+		.footer-content{
+			
+			.footer-autor{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				margin: 1em 0;
+				height: 5em;
+				width: 100%;
+	
+				a{
+					color: $pure;
+					font-size: 1.8em;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	
 }
 
 @media (max-width: 700px) {
@@ -1041,6 +1211,11 @@ nav {
 					background-position: center;
 				}
 			}
+		}
+	}
+	.plus{
+		h3{
+			font-size: 3em;
 		}
 	}
 }
