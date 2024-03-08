@@ -84,17 +84,21 @@ nav {
 	height: 5em;
 	z-index: 100;
 
-    &::after{
-        position: absolute;
-        top: -100%;
-        left: -50%;
-        content: '';
-        width: 200%;
-        height: 200%;
-        background: rgb(255,255,255);
-        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(204,197,185,0.5) 75%);
-        z-index: -10;
-    }
+	&::after {
+		position: absolute;
+		top: -100%;
+		left: -50%;
+		content: '';
+		width: 200%;
+		height: 200%;
+		background: rgb(255, 255, 255);
+		background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(204, 197, 185, 0.5) 75%
+		);
+		z-index: -10;
+	}
 
 	.burger {
 		display: none;
@@ -121,15 +125,23 @@ nav {
 		}
 	}
 	.logo {
-		width: 20%;
+		position: relative;
+		padding: 0.5em;
+		width: 250px;
 		height: 100%;
-		background-color: $main-color;
 		border-radius: 0.3em;
+		background-color: $pure;
 		box-shadow: 0 0 15px #ccc5b998;
-		p {
-			margin-left: 50px;
-			color: $pure;
-			font-size: 3.5rem;
+		.logo-img{
+			position: absolute;
+			transform: translate(-50%,-50%);
+			top: 30%;
+			left: 70%;
+			width: 120%;
+			height: 120%;
+			background-image: url(../img/imprezalogomix.png);
+			background-size: contain;
+			background-repeat: no-repeat;
 		}
 	}
 	.menu {
@@ -170,11 +182,10 @@ nav {
 	width: 100%;
 	height: 70em;
 
-
 	.bg-shadow {
 		position: absolute;
 		top: 10%;
-        left: -10%;
+		left: -10%;
 		width: 65em;
 		height: 100em;
 		border-radius: 70% 30% 61% 39% / 46% 67% 33% 54%;
@@ -326,8 +337,7 @@ nav {
 // SERVICE
 
 .service {
-    position: relative;
-
+	position: relative;
 
 	.service-content {
 		display: flex;
@@ -349,7 +359,7 @@ nav {
 				width: 100%;
 				height: 20em;
 
-				p{
+				p {
 					// font-size: 1.8rem;
 				}
 				h2 {
@@ -524,7 +534,7 @@ nav {
 // ACC
 
 .accordeon {
-    position: relative;
+	position: relative;
 
 	.accordeon-content {
 		display: flex;
@@ -555,10 +565,10 @@ nav {
 					i {
 						font-size: 2.5em;
 						transition: all 0.3s;
-                        color: $main-color;
+						color: $main-color;
 					}
 					h3 {
-                        color: $main-color;
+						color: $main-color;
 					}
 
 					&:hover i {
@@ -593,7 +603,7 @@ nav {
 		padding: 10em 0;
 		min-height: 58em;
 		width: 100%;
-        // background-color: lime;
+		// background-color: lime;
 
 		.contact-img {
 			padding: 1em;
@@ -646,9 +656,9 @@ nav {
 			padding: 0 5em;
 			width: 60%;
 
-            h2{
-                margin-bottom: 0.5em;
-            }
+			h2 {
+				margin-bottom: 0.5em;
+			}
 
 			.form-row {
 				display: flex;
@@ -659,152 +669,158 @@ nav {
 				.form-column {
 					display: flex;
 					flex-direction: column;
-					width: 48%;
+					width: 100%;
 
 					.label-row {
-                        display: flex;
+						display: flex;
 						margin: 0.8em 0 0.6em;
 
-                        .label-icon{
-                            margin: 0.2em 0;
-                            width: 2em;
-                            height: 2em;
+						.label-icon {
+							margin: 0.2em 0;
+							width: 2em;
+							height: 2em;
 
-                            i{
-                                font-size: 2rem;
-                                color: $main-color;
-                            }
-                        }
+							i {
+								font-size: 2rem;
+								color: $main-color;
+							}
+						}
 
 						label {
-                            margin-left: 0.4em;
+							margin-left: 0.4em;
 							position: relative;
 							font-size: 2rem;
 						}
 					}
 
 					input {
-                        margin: 0.5em 0;
-                        padding: 0em 0.5em;
+						margin: 0.5em 0;
+						padding: 0em 0.5em;
 						width: 100%;
 						height: 2.8em;
-                        border: 0.1em solid $gray;
-                        border-radius: 0.3em;
+						border: 0.1em solid $gray;
+						border-radius: 0.3em;
 					}
 
-                    
 					textarea {
-					    max-width: 208%;
-                        padding: 0em 0.5em;
-					    width: 208%;
-                        min-height: 15em ;
-                        border-radius: 0.3em;
-                        border: 0.1em solid $gray;
+						max-width: 208%;
+						padding: 0em 0.5em;
+						width: 100%;
+						min-height: 15em;
+						border-radius: 0.3em;
+						border: 0.1em solid $gray;
 					}
 				}
 			}
 
-            input{
-                margin-top: 0.5em;
-                width: 100%;
-                height: 2em;
-                cursor: pointer;
-            }
+			input {
+				margin-top: 0.5em;
+				width: 100%;
+				height: 2em;
+				cursor: pointer;
+			}
 		}
 	}
 }
 
 // PLUS
 
-.plus{
-    padding: 2em 0 0 8em;
-    min-height: 28em;
-    width: 100%;
-    text-align: left;
-    h3{
-        color: $gray;
-        font-size: 5em;
-        padding-bottom: 0.8em;
-    }
+.plus {
+	padding: 2em 0 0 8em;
+	min-height: 28em;
+	width: 100%;
+	text-align: left;
+	h3 {
+		color: $gray;
+		font-size: 5em;
+		padding-bottom: 0.8em;
+	}
 }
 
 // FOOTER
 
-.footer{
+.footer {
 	background-color: $main-color;
-    .footer-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 10em 0 0;
-	    min-height: 50em;
-	    width: 100%;
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 10em 0 0;
+		min-height: 50em;
+		width: 100%;
 
-        .footer-box{
-            display: flex;
-            flex-direction: column;
-            height: 35em;
-            width: 50%;
-            
-            .logo-footer{
-                color: $pure;
-                font-size: 10rem;
-                margin-bottom: 0.5em;
-            }
+		.footer-box {
+			display: flex;
+			flex-direction: column;
+			height: 35em;
+			width: 50%;
 
-            a{
-                text-decoration: none;
-                color: $pure;
-                font-size: 2em;
-                margin-bottom: 1em;
-            }
-        }
-        .footer-autor{
-            display: flex;
-            justify-content: space-between;
-            height: 5em;
-            width: 100%;
+			.logo-footer {
+				color: $pure;
+				font-size: 10rem;
+				margin-bottom: 0.5em;
+			}
 
-            a{
-                color: $pure;
-                font-size: 1.8em;
-                text-decoration: none;
-            }
-        }
-    }
+			a {
+				text-decoration: none;
+				color: $pure;
+				font-size: 2em;
+				margin-bottom: 1em;
+			}
+		}
+		.footer-autor {
+			display: flex;
+			justify-content: space-between;
+			height: 5em;
+			width: 100%;
+
+			a {
+				color: $pure;
+				font-size: 1.8em;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.test {
+	position: relative;
+	width: 100%;
+	height: 80em;
+	background-image: url(../img/lion.jpg);
+	background-size: cover;
+	z-index: 1;
+
+	h3 {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 45%;
+		left: 50%;
+		font-size: 19em;
+		width: 100%;
+		text-align: center;
+		color: $pure;
+		z-index: -2;
+	}
+
+	.test-up {
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/lioncięte.png);
+		background-size: cover;
+		z-index: 10;
+	}
 }
 
 
 
 
-.test{
-    position: relative;
-    width: 100%;
-    height: 80em;
-    background-image: url(../img/lion.jpg);
-    background-size: cover;
-    z-index: 1;
 
-    h3{
-        position: absolute;
-        transform: translate(-50%,-50%);
-        top: 45%;
-        left: 50%;
-        font-size: 19em;
-        width: 100%;
-        text-align: center;
-        color: $pure;
-        z-index: -2;
-    }
 
-    .test-up{
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/lioncięte.png);
-        background-size: cover;
-        z-index: 10;
-    }
-}
+
+
+
+
 
 
 
@@ -817,18 +833,9 @@ nav {
 .hide-menu {
 	animation: hide-menu 0.7s linear forwards;
 }
-
 .add-height {
 	height: 12em !important;
 }
-
-
-
-
-
-
-
-
 
 // MEDIA
 
@@ -872,17 +879,13 @@ nav {
 			}
 		}
 	}
-	.service {	
+	.service {
 		.service-content {
-	
 			.service-column {
-	
 				.service-text-area {
-
-					p{
+					p {
 						font-size: 1.8rem;
 					}
-					
 				}
 			}
 		}
@@ -894,17 +897,16 @@ nav {
 				}
 				p {
 					font-size: 1.8rem;
-				}	
+				}
 			}
 		}
 	}
-	.plus{
+	.plus {
 		padding: 3em 0 0 5em;
-		h3{
+		h3 {
 			font-size: 4em;
 		}
 	}
-	
 }
 @media (max-width: 900px) {
 	nav {
@@ -1022,22 +1024,21 @@ nav {
 			.service-column {
 				flex-direction: column;
 				width: 100%;
-	
 			}
 		}
 	}
-	.special{ 
+	.special {
 		.special-content {
 			.special-text {
 			}
-	
+
 			.special-img {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
 				width: 100%;
 				height: 100%;
-	
+
 				.special-img-box {
 					margin: 1em 0;
 					width: 100%;
@@ -1047,14 +1048,14 @@ nav {
 	}
 	.accordeon {
 		position: relative;
-	
+
 		.accordeon-content {
 			display: flex;
 			flex-direction: column;
-	
+
 			.accordeon-elements {
 				width: 100%;
-	
+
 				.accordeon-box {
 					display: flex;
 					flex-direction: column;
@@ -1064,13 +1065,13 @@ nav {
 					width: 100%;
 					min-height: 8em;
 					border-radius: 0.3em;
-	
+
 					.box-title {
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
 						cursor: pointer;
-	
+
 						i {
 							font-size: 2.5em;
 							transition: all 0.3s;
@@ -1079,7 +1080,7 @@ nav {
 						h3 {
 							color: $main-color;
 						}
-	
+
 						&:hover i {
 							transform: rotate(90deg);
 						}
@@ -1096,7 +1097,6 @@ nav {
 				padding: 0.1em 2em 1em 0.9em;
 				width: 100%;
 				height: 100%;
-
 			}
 		}
 	}
@@ -1105,34 +1105,31 @@ nav {
 			flex-direction: column;
 			width: 100%;
 			// background-color: lime;
-	
+
 			.contact-img {
 				padding: 1em 0 0 2em;
 				height: 35em;
 				width: 90%;
-	
 			}
 			.contact-form {
 				margin-top: 5em;
 				height: 50em;
 				padding: 0 5em;
 				width: 100%;
-
 			}
 		}
 	}
-	.plus{
+	.plus {
 		padding: 5em 0;
 		text-align: center;
 		width: 100%;
-		h3{
+		h3 {
 			font-size: 3.5em;
 		}
 	}
-	.footer{
-		.footer-content{
-			
-			.footer-autor{
+	.footer {
+		.footer-content {
+			.footer-autor {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
@@ -1140,8 +1137,8 @@ nav {
 				margin: 1em 0;
 				height: 5em;
 				width: 100%;
-	
-				a{
+
+				a {
 					color: $pure;
 					font-size: 1.8em;
 					text-decoration: none;
@@ -1149,7 +1146,6 @@ nav {
 			}
 		}
 	}
-	
 }
 
 @media (max-width: 700px) {
@@ -1180,7 +1176,6 @@ nav {
 		}
 	}
 }
-
 @media (max-width: 576px) {
 	.header {
 		height: 60em;
@@ -1213,13 +1208,68 @@ nav {
 			}
 		}
 	}
-	.plus{
-		h3{
+	.plus {
+		h3 {
 			font-size: 3em;
 		}
 	}
 }
+@media (max-width: 500px) {
+	.special {
+		.special-content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 10em 0;
+			min-height: 50em;
+			width: 100%;
 
+			.special-text {
+				height: 23em;
+			}
+		}
+	}
+	.contact-form {
+		height: 70em;
+		.form-row {
+			display: flex;
+			flex-direction: column;
+
+			.form-column {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+
+
+				textarea {
+					max-width: 100%;
+					padding: 0em 0.5em;
+					// width: 100% !important;
+					min-height: 15em;
+					background-color: lime;
+				}
+			
+			}
+		}
+	}
+
+	.plus {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin-top: 15em;
+		min-height: 28em;
+		width: 100%;
+		text-align: left;
+		h3 {
+			color: $gray;
+			font-size: 3em;
+			padding-bottom: 0.8em;
+		}
+	}
+}
 // ANIMATION
 
 @keyframes heder-img {

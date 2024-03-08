@@ -113,16 +113,24 @@ nav .burger:hover > i {
   color: #EB5E28;
 }
 nav .logo {
-  width: 20%;
+  position: relative;
+  padding: 0.5em;
+  width: 250px;
   height: 100%;
-  background-color: #EB5E28;
   border-radius: 0.3em;
+  background-color: #fff;
   box-shadow: 0 0 15px rgba(204, 197, 185, 0.5960784314);
 }
-nav .logo p {
-  margin-left: 50px;
-  color: #fff;
-  font-size: 3.5rem;
+nav .logo .logo-img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 70%;
+  width: 120%;
+  height: 120%;
+  background-image: url(../img/imprezalogomix.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 nav .menu {
   position: relative;
@@ -574,7 +582,7 @@ nav .menu a:hover {
 .contact .contact-content .contact-form .form-row .form-column {
   display: flex;
   flex-direction: column;
-  width: 48%;
+  width: 100%;
 }
 .contact .contact-content .contact-form .form-row .form-column .label-row {
   display: flex;
@@ -605,7 +613,7 @@ nav .menu a:hover {
 .contact .contact-content .contact-form .form-row .form-column textarea {
   max-width: 208%;
   padding: 0em 0.5em;
-  width: 208%;
+  width: 100%;
   min-height: 15em;
   border-radius: 0.3em;
   border: 0.1em solid #CCC5B9;
@@ -978,6 +986,53 @@ nav .menu a:hover {
   }
   .plus h3 {
     font-size: 3em;
+  }
+}
+@media (max-width: 500px) {
+  .special .special-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10em 0;
+    min-height: 50em;
+    width: 100%;
+  }
+  .special .special-content .special-text {
+    height: 23em;
+  }
+  .contact-form {
+    height: 70em;
+  }
+  .contact-form .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form .form-row .form-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact-form .form-row .form-column textarea {
+    max-width: 100%;
+    padding: 0em 0.5em;
+    min-height: 15em;
+    background-color: lime;
+  }
+  .plus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 15em;
+    min-height: 28em;
+    width: 100%;
+    text-align: left;
+  }
+  .plus h3 {
+    color: #CCC5B9;
+    font-size: 3em;
+    padding-bottom: 0.8em;
   }
 }
 @keyframes heder-img {
